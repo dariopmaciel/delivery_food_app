@@ -84,6 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     intervalStart: 0.4,
                     duration: const Duration(milliseconds: 1250),
                     child: ListView.separated(
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: vendorList.length,
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,

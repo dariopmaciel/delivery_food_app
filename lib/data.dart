@@ -1,6 +1,6 @@
 //Home Screen Data
 
-List<Map<String, dynamic>> vendorList = const [
+List<Map<String, dynamic>> vendorList = [
   {
     "imagePath": "assets/images/logo/gladis_logo.jpg",
     "name": "Gladis Baker",
