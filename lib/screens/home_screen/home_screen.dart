@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   hasBackButton: false,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: space2x),
+                  padding: const EdgeInsets.symmetric(horizontal: space2x),
                   child: RichText(
                     text: TextSpan(
                       text: "Olá, ",
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: space2x),
+                  padding: const EdgeInsets.symmetric(horizontal: space2x),
                   child: Text(
                     "Entregar em Posto Morumbi",
                     style: Theme.of(context)
