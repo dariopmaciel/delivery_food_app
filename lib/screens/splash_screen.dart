@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:delivery_food_app/core/animations/animations.dart';
 import 'package:delivery_food_app/core/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import 'home_screen/home_screen.dart';
 

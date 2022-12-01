@@ -9,9 +9,9 @@ class ClippedContainer extends StatelessWidget {
     super.key,
     required this.child,
     this.height,
-    this.isAnimated = true,
     this.backgroundColor,
     this.alignment = Alignment.center,
+    this.isAnimated = true,
   });
 
   final Widget child;
