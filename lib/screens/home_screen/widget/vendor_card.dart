@@ -72,6 +72,7 @@ class VendorCard extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Container(
+                    padding: const EdgeInsets.all(space1x),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color(0xfff7f2f7),
@@ -100,7 +101,7 @@ class VendorCard extends StatelessWidget {
                   Text(
                     "2,4Km",
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                          color: Colors.grey.shade700,
+                          color: Colors.grey.shade400,
                           fontSize: rf(12),
                         ),
                   ),
@@ -122,7 +123,7 @@ class FavIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CIcons.fromMaterial(
-      icon: Icons.favorite,
+      icon: Icons.favorite_border,
       semanticLabel: "Favorite",
       color: Theme.of(context).primaryColorDark,
     );

@@ -17,16 +17,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _duration = const Duration(milliseconds: 750);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       body: SlideAnimation(
         begin: const Offset(0, 400),
-        duration: const Duration(milliseconds: 750),
+        duration: _duration,
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 750),
+          duration: _duration,
           padding: EdgeInsets.only(bottom: rh(20)),
           curve: Curves.fastOutSlowIn,
+          decoration: BoxDecoration(
+            color: Theme.of(context).scaffoldBackgroundColor,
+          ),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   hasBackButton: false,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: space2x),
+                  padding: EdgeInsets.symmetric(horizontal: space2x),
                   child: RichText(
                     text: TextSpan(
                       text: "Olá, ",
@@ -56,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: space2x),
+                  padding: EdgeInsets.symmetric(horizontal: space2x),
                   child: Text(
                     "Entregar em Posto Morumbi",
                     style: Theme.of(context)
@@ -72,26 +77,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: rh(space5x)),
                 FadeAnimation(
-                  intervalStart: 0.7,
+                  intervalStart: 0.4,
                   duration: const Duration(milliseconds: 1250),
                   child: SlideAnimation(
                     begin: const Offset(0, 100),
                     intervalStart: 0.4,
                     duration: const Duration(milliseconds: 1250),
                     child: ListView.separated(
-                      padding: EdgeInsets.zero,
                       itemCount: vendorList.length,
+                      padding: EdgeInsets.zero,
                       shrinkWrap: true,
                       separatorBuilder: (BuildContext context, int index) {
                         return Divider(
-                          height: rh(space1x),
+                          height: rh(space4x),
                           endIndent: rw(20),
                           indent: rw(20),
                         );
                       },
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
-                          //onTap: ,
+                          //onTap: _navigate,
                           child: VendorCard(
                             imagePath: vendorList[index]["imagePath"],
                             name: vendorList[index]["name"],
@@ -101,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
