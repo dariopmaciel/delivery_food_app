@@ -39,7 +39,7 @@ class ClippedContainer extends StatelessWidget {
         ? SlideAnimation(
             intervalStart: 0.4,
             begin: const Offset(850, 0),
-            duration: const Duration(milliseconds: 850),
+            duration: const Duration(milliseconds: 1250),
             child: container,
           )
         : container;
