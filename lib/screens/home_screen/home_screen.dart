@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _height = MediaQuery.of(context).padding.top + rh(50);
     setState(() {});
     //wait till animatian is finished
-    await Future.delayed(_duration);
+    await Future.delayed(_psudoDuration);
   }
 
   _animateContainerFromTopToBottom() async {
