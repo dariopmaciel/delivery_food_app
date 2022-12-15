@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _navigate() async {
     //animate creen container from bottom to top
-    _animateContainerFromBottomToTop();
+    await _animateContainerFromBottomToTop();
 
     await Navigation.push(
       context,
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _animateContainerFromTopToBottom() async {
     //await
-    await Future.delayed(_psudoDuration);
+    await Future.delayed(_duration);
 
     //animate from top to bottom
     _height = MediaQuery.of(context).size.height;

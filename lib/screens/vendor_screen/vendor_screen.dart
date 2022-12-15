@@ -1,9 +1,13 @@
 import 'dart:async';
 
+import 'package:delivery_food_app/core/animations/animations.dart';
 import 'package:delivery_food_app/core/utils/ui_helper.dart';
 import 'package:delivery_food_app/core/utils/utils.dart';
 import 'package:delivery_food_app/core/widgets/app_bar/custom_app_bar.dart';
+import 'package:delivery_food_app/data.dart';
 import 'package:delivery_food_app/screens/home_screen/widget/clipped_container.dart';
+import 'package:delivery_food_app/screens/vendor_screen/widgets/product_item_card.dart.dart';
+import 'package:delivery_food_app/screens/vendor_screen/widgets/vendor_info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -20,7 +24,12 @@ class _VendorScreenState extends State<VendorScreen> {
   final _duration = const Duration(milliseconds: 750);
   final _psudoDuration = const Duration(milliseconds: 150);
 
-  _navigateBack() async {}
+  _navigate() {}
+
+  _navigateBack() async {
+    await _animateContainerFromBottomToTop();
+    Navigation.pop(context);
+  }
 
   _animateContainerFromBottomToTop() async {
     //Animate back to defauld value
@@ -68,7 +77,7 @@ class _VendorScreenState extends State<VendorScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: rh(340),
+                height: rh(380),
                 child: Stack(
                   children: [
                     Positioned(
@@ -89,15 +98,56 @@ class _VendorScreenState extends State<VendorScreen> {
                         onBackTap: _navigateBack,
                       ),
                     ),
-                    Positioned(
-                      child: ClippedContainer(
-                        backgroundColor: Colors.white,
-                        child: Container(),
-                      ),
-                    ),
+                    // const Positioned(
+                    //   bottom: 0,
+                    //   left: 0,
+                    //   right: 0,
+                    //   child: ClippedContainer(
+                    //     backgroundColor: Colors.white,
+                    //     child: VendorInfoCard(
+                    //       title: "New York Donut",
+                    //       rating: 4.2,
+                    //       sideImagePath: 'assets/images/temp_vendor_logo.png',
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
+              SizedBox(height: rh(space5x)),
+              /* FadeAnimation(
+                intervalStart: 0.4,
+                duration: const Duration(milliseconds: 1250),
+                child: SlideAnimation(
+                  begin: const Offset(0, 100),
+                  intervalStart: 0.4,
+                  duration: const Duration(milliseconds: 1500),
+                  child: ListView.separated(
+                    //este item trava a listview e foi a melhor coisa que me apareceu
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: productList.length,
+                    padding: EdgeInsets.zero,
+                    shrinkWrap: true,
+                    separatorBuilder: (BuildContext context, int index) {
+                      return Divider(
+                        height: rh(space4x),
+                        endIndent: rw(20),
+                        indent: rw(20),
+                      );
+                    },
+                    itemBuilder: (BuildContext context, int index) {
+                      return GestureDetector(
+                        onTap: _navigate,
+                        child: ProductItem(
+                          imagePath: productList[index]["imagePath"],
+                          title: productList[index]['title'],
+                          detail: productList[index]['detail'],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),*/
             ],
           ),
         ),
