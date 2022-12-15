@@ -26,14 +26,17 @@ class _VendorScreenState extends State<VendorScreen> {
   final _psudoDuration = const Duration(milliseconds: 150);
 
   _navigate() async {
-    await _animateContainerFromBottomToTop();
+    _animateContainerFromBottomToTop();
     //disponibiliza os produtos na tela
     //espera até que o produto esteja ativo
-    await Navigation.push(context,
-        customPageTransition: PageTransition(
-          child: ProductionScreen(),
-          type: PageTransitionType.fadeIn,
-        ));
+    await Navigation.push(
+      context,
+      customPageTransition: PageTransition(
+        child: const ProductionScreen(),
+        type: PageTransitionType.fadeIn,
+      ),
+    );
+    await _animateContainerFromTopToBottom();
   }
 
   _navigateBack() async {
