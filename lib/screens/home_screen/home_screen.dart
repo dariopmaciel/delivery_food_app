@@ -130,39 +130,39 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const CategoryListView(),
                 ),
                 SizedBox(height: rh(space2x)),
-                // FadeAnimation(
-                //   intervalStart: 0.4,
-                //   duration: const Duration(milliseconds: 1250),
-                //   child: SlideAnimation(
-                //     begin: const Offset(0, 100),
-                //     intervalStart: 0.4,
-                //     duration: const Duration(milliseconds: 1500),
-                //     child: ListView.separated(
-                //       //este item trava a listview e foi a melhor coisa que me apareceu
-                //       physics: const NeverScrollableScrollPhysics(),
-                //       itemCount: vendorList.length,
-                //       padding: EdgeInsets.zero,
-                //       shrinkWrap: true,
-                //       separatorBuilder: (BuildContext context, int index) {
-                //         return Divider(
-                //           height: rh(space4x),
-                //           endIndent: rw(20),
-                //           indent: rw(20),
-                //         );
-                //       },
-                //       itemBuilder: (BuildContext context, int index) {
-                //         return GestureDetector(
-                //           onTap: _navigate,
-                //           child: VendorCard(
-                //             imagePath: vendorList[index]["imagePath"],
-                //             name: vendorList[index]["name"],
-                //             rating: vendorList[index]["rating"].toString(),
-                //           ),
-                //         );
-                //       },
-                //     ),
-                //   ),
-                // ),
+                FadeAnimation(
+                  intervalStart: 0.4,
+                  duration: const Duration(milliseconds: 1250),
+                  child: SlideAnimation(
+                    begin: const Offset(0, 100),
+                    intervalStart: 0.4,
+                    duration: const Duration(milliseconds: 1500),
+                    child: ListView.separated(
+                      //este item trava a listview e foi a melhor coisa que me apareceu
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: vendorList.length,
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      separatorBuilder: (BuildContext context, int index) {
+                        return Divider(
+                          height: rh(space4x),
+                          endIndent: rw(20),
+                          indent: rw(20),
+                        );
+                      },
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: _navigate,
+                          child: VendorCard(
+                            imagePath: vendorList[index]["imagePath"],
+                            name: vendorList[index]["name"],
+                            rating: vendorList[index]["rating"].toString(),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
