@@ -6,6 +6,7 @@ import 'package:delivery_food_app/core/utils/utils.dart';
 import 'package:delivery_food_app/core/widgets/app_bar/custom_app_bar.dart';
 import 'package:delivery_food_app/data.dart';
 import 'package:delivery_food_app/screens/home_screen/widget/clipped_container.dart';
+import 'package:delivery_food_app/screens/product_screen/production_screen.dart';
 import 'package:delivery_food_app/screens/vendor_screen/widgets/product_item_card.dart.dart';
 import 'package:delivery_food_app/screens/vendor_screen/widgets/vendor_info_card.dart';
 import 'package:flutter/material.dart';
@@ -24,10 +25,19 @@ class _VendorScreenState extends State<VendorScreen> {
   final _duration = const Duration(milliseconds: 750);
   final _psudoDuration = const Duration(milliseconds: 150);
 
-  _navigate() {}
+  _navigate() async {
+    await _animateContainerFromBottomToTop();
+    //disponibiliza os produtos na tela
+    //espera até que o produto esteja ativo
+    await Navigation.push(context,
+        customPageTransition: PageTransition(
+          child: ProductionScreen(),
+          type: PageTransitionType.fadeIn,
+        ));
+  }
 
   _navigateBack() async {
-    await _animateContainerFromBottomToTop();
+    _animateContainerFromBottomToTop();
     Navigation.pop(context);
   }
 
@@ -77,7 +87,7 @@ class _VendorScreenState extends State<VendorScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: rh(380),
+                height: rh(300),
                 child: Stack(
                   children: [
                     Positioned(
@@ -114,7 +124,7 @@ class _VendorScreenState extends State<VendorScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: rh(space5x)),
+              SizedBox(height: rh(space2x)),
               FadeAnimation(
                 intervalStart: 0.4,
                 duration: const Duration(milliseconds: 1250),

@@ -1,4 +1,4 @@
-//23:00
+//24:00
 
 import 'package:delivery_food_app/core/theme/app_theme.dart';
 import 'package:delivery_food_app/core/utils/utils.dart';
