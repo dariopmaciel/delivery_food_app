@@ -18,5 +18,3 @@ Credits to Flutter UI Dev
 ![Captura de tela de 2022-12-15 10-53-48](https://user-images.githubusercontent.com/116087297/207881346-84c8f7ab-00c5-435c-acdb-a9b7f13e3495.png)
 
 ![Captura de tela de 2022-12-15 10-54-03](https://user-images.githubusercontent.com/116087297/207881392-01889eb1-0d15-4946-a288-e3f528f7354f.png)
-
-![Captura de tela de 2022-12-15 10-53-48](https://user-images.githubusercontent.com/116087297/207881422-31eb40c6-f3f1-4a80-9a0a-c01bffde2a5c.png)
