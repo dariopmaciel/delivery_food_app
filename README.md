@@ -1,16 +1,8 @@
 # delivery_food_app
 
-A new Flutter project.
+About this new Flutter project.
 
-## Getting Started
+This project seeks to implement the best practices for screen movement, POP, better understanding of LISTS and MAPS of sellers and products, manipulation of assets and images to create an app for selling merchandise.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Study done by Dario P Maciel.
+Credits to Flutter UI Dev
