@@ -5,7 +5,7 @@ About this new Flutter project.
 This project seeks to implement the best practices for screen movement, POP, better understanding of LISTS and MAPS of sellers and products, manipulation of assets and images to create an app for selling merchandise.
 
 Study done by Dario P Maciel.
-Credits to Flutter UI Dev
+Credits to Flutter UI Dev.
 
 ![Captura de tela de 2022-12-15 11-09-51](https://user-images.githubusercontent.com/116087297/207882413-24986b20-ca4d-4928-8c48-e65e56bc61f6.png)
 
