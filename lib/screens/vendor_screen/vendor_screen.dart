@@ -115,7 +115,7 @@ class _VendorScreenState extends State<VendorScreen> {
                 ),
               ),
               SizedBox(height: rh(space5x)),
-              /* FadeAnimation(
+              FadeAnimation(
                 intervalStart: 0.4,
                 duration: const Duration(milliseconds: 1250),
                 child: SlideAnimation(
@@ -147,7 +147,7 @@ class _VendorScreenState extends State<VendorScreen> {
                     },
                   ),
                 ),
-              ),*/
+              ),
             ],
           ),
         ),
