@@ -98,19 +98,19 @@ class _VendorScreenState extends State<VendorScreen> {
                         onBackTap: _navigateBack,
                       ),
                     ),
-                    // const Positioned(
-                    //   bottom: 0,
-                    //   left: 0,
-                    //   right: 0,
-                    //   child: ClippedContainer(
-                    //     backgroundColor: Colors.white,
-                    //     child: VendorInfoCard(
-                    //       title: "New York Donut",
-                    //       rating: 4.2,
-                    //       sideImagePath: 'assets/images/temp_vendor_logo.png',
-                    //     ),
-                    //   ),
-                    // ),
+                    const Positioned(
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: ClippedContainer(
+                        backgroundColor: Colors.white,
+                        child: VendorInfoCard(
+                          title: "New York Donut",
+                          rating: 4.2,
+                          sideImagePath: 'assets/images/temp_vendor_logo.png',
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
