@@ -7,6 +7,10 @@ This project seeks to implement the best practices for screen movement, POP, bet
 Study done by Dario P Maciel.
 Credits to Flutter UI Dev
 
+![Captura de tela de 2022-12-15 11-09-51](https://user-images.githubusercontent.com/116087297/207882413-24986b20-ca4d-4928-8c48-e65e56bc61f6.png)
+
+![Captura de tela de 2022-12-15 11-09-51](https://user-images.githubusercontent.com/116087297/207882431-100382ec-e0a1-4d73-95a0-61337e20722f.png)
+
 ![Captura de tela de 2022-12-14 17-09-04](https://user-images.githubusercontent.com/116087297/207881067-599de9c0-e0a8-4e28-9f35-251f6a591e15.png)
 
 ![Captura de tela de 2022-12-15 10-53-32](https://user-images.githubusercontent.com/116087297/207881364-46036057-9bd9-44f3-8e11-b09825822c09.png)
